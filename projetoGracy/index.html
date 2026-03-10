@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CoLab Fashion</title>
+
+<link rel="stylesheet" href="estilo/style.css">
+
+</head>
+
+<body>
+
+<div class="phone">
+
+<div class="logo">
+CoLab
+<span>FASHION NETWORK</span>
+</div>
+
+<!--LOGIN-->
+<div id="login">
+
+<div class="card">
+
+<h2>CoLab Fashion</h2>
+
+<input id="usuario" placeholder="Usuário">
+
+<input id="senha" type="password" placeholder="Senha">
+
+<button class="primary" onclick="entrar()">
+Entrar
+</button>
+
+<button class="secondary" onclick="criarConta()">
+Criar conta
+</button>
+
+</div>
+
+</div>
+
+<!-- HOME -->
+
+<div id="home">
+
+<div class="card">
+
+<h3>Bem vindo</h3>
+
+<p>Conecte profissionais da moda.</p>
+<div class="card">
+
+<h3>💳 Créditos</h3>
+
+<p class="creditos">
+<span id="creditosUsuario">200</span> créditos
+</p>
+
+<button onclick="comprarCreditos()">
+Comprar créditos
+</button>
+
+</div>
+
+<button class="primary" onclick="mostrarTela('buscar')">
+Buscar profissionais
+</button>
+
+<button class="secondary" onclick="mostrarTela('perfil')">
+Meu perfil
+</button>
+
+<button onclick="modoDark()">
+🌙 Modo Dark
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>✨ Trabalhos recentes</h3>
+
+<div class="portfolio">
+
+<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
+<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d">
+<img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- BUSCAR -->
+
+<div id="buscar" style="display:none">
+
+<button class="voltar" onclick="voltarHome()">⬅ Voltar</button>
+
+<div class="card">
+
+<h3>🔎 Buscar profissionais</h3>
+
+<select id="cidade">
+
+<option>São Paulo</option>
+<option>Rio de Janeiro</option>
+<option>Curitiba</option>
+<option>Belo Horizonte</option>
+
+</select>
+
+<select id="categoria">
+
+<option>Fotógrafo</option>
+<option>Costureira</option>
+<option>Modelagem</option>
+<option>Produção</option>
+
+</select>
+
+<select id="nivel">
+
+<option>Iniciante</option>
+<option>Mediano</option>
+<option>Avançado</option>
+
+</select>
+
+<button class="secondary" onclick="buscarProfissionais()">
+Buscar
+</button>
+
+</div>
+
+<div id="feedProfissionais"></div>
+
+</div>
+
+<!-- PERFIL -->
+
+<div id="perfil" style="display:none">
+
+<button class="voltar" onclick="voltarHome()">⬅ Voltar</button>
+
+<div class="card">
+
+<h3>👤 Perfil</h3>
+
+<p><strong>Nome:</strong> Lucas</p>
+
+<p><strong>Nível:</strong></p>
+<div id="perfilNivel" class="badge">
+Avançado
+</div>
+
+<p><strong>Avaliação:</strong></p>
+
+<div class="stars">
+⭐ ⭐ ⭐ ⭐ ⭐
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Portfólio</h3>
+
+<div class="portfolio">
+
+<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
+<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d">
+<img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<button onclick="mostrarTela('home')">🏠</button>
+<button onclick="mostrarTela('buscar')">🔎</button>
+<button onclick="mostrarTela('perfil')">👤</button>
+
+</div>
+
+</div>
+
+<div id="notificacao" class="toast"></div>
+
+<script src="estilo/script.js"></script>
+
+</body>
+</html>
